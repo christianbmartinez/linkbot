@@ -74,7 +74,7 @@
     @apply bg-background text-foreground;
   }
 }
-
+/* Custom Gradient Scrollbar - Max Compatibility */
 body::-webkit-scrollbar {
   width: 0.5em;
   background: rgb(15, 23, 42);

@@ -1,12 +1,29 @@
 'use client'
 
+import { useEffect } from 'react'
 import Link from 'next/link'
-import { motion } from 'framer-motion'
+import { motion, useAnimationControls } from 'framer-motion'
 import Image from 'next/image'
 
 import { Button } from './ui/button'
 
 export const Hero = () => {
+  const controls = useAnimationControls()
+
+  useEffect(() => {
+    controls.start((i) => ({
+      y: [-5, 5],
+      rotate: 1,
+      transition: {
+        duration: 2,
+        repeat: Infinity,
+        repeatDelay: 0.2,
+        repeatType: 'reverse',
+        delay: i * 0.3,
+      },
+    }))
+  })
+
   return (
     <div className='lg:pt-48 px-6 cursor-default'>
       <div className='container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center'>
@@ -24,7 +41,7 @@ export const Hero = () => {
           }}
           className='w-full flex flex-row justify-center items-center lg:hidden p-6'
         >
-          <Image alt='Logo' src='/robot.png' height={350} width={350} />
+          <Image alt='Logo' src='/robobunny.png' height={350} width={350} />
         </motion.div>
         <div className='flex lg:flex-col w-full lg:w-4/6 justify-center items-center text-center lg:text-left'>
           <div className='max-w-[600px]'>
@@ -43,22 +60,23 @@ export const Hero = () => {
             </Link>
           </div>
         </div>
-        <motion.div
-          initial={{ y: 0 }}
-          animate={{
-            y: [-5, 5],
-            rotate: 1,
-            transition: {
-              duration: 2,
-              repeat: Infinity,
-              repeatDelay: 0.2,
-              repeatType: 'reverse',
-            },
-          }}
-          className='w-full hidden lg:block lg:flex-col lg:w-2/6 p-6'
-        >
-          <Image alt='Logo' src='/robot.png' height={400} width={400} />
-        </motion.div>
+        <div className='w-full hidden lg:flex lg:flex-row lg:w-2/6 lg:justify-around lg:items-center'>
+          <motion.div custom={0} animate={controls}>
+            <Image
+              alt='Logo'
+              src='/robobunny.png'
+              className='absolute'
+              height={500}
+              width={500}
+            />
+          </motion.div>
+          <motion.div custom={1} animate={controls}>
+            <Image alt='Logo' src='/robodroid.png' height={300} width={300} />
+          </motion.div>
+          <motion.div custom={2} animate={controls}>
+            <Image alt='Logo' src='/robocat.png' height={300} width={300} />
+          </motion.div>
+        </div>
       </div>
     </div>
   )
