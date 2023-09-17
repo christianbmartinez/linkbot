@@ -3,7 +3,6 @@
 import { useEffect } from 'react'
 import Link from 'next/link'
 import { motion, useAnimationControls } from 'framer-motion'
-import Image from 'next/image'
 
 import { Button } from './ui/button'
 
