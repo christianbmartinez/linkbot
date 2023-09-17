@@ -12,14 +12,14 @@ export const Hero = () => {
 
   useEffect(() => {
     controls.start((i) => ({
-      y: [-5, 5],
-      rotate: 1,
+      y: [-10, 10],
+      x: [Math.floor(Math.random() * 5), Math.floor(Math.random() * 5)],
       transition: {
         duration: 2,
         repeat: Infinity,
-        repeatDelay: 0.2,
+        repeatDelay: 0.1,
         repeatType: 'reverse',
-        delay: i * 0.3,
+        delay: i * 0.5,
       },
     }))
   })
@@ -27,22 +27,35 @@ export const Hero = () => {
   return (
     <div className='lg:pt-48 px-6 cursor-default'>
       <div className='container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center'>
-        <motion.div
-          initial={{ y: 0 }}
-          animate={{
-            y: [-5, 5],
-            rotate: 1,
-            transition: {
-              duration: 2,
-              repeat: Infinity,
-              repeatDelay: 0.2,
-              repeatType: 'reverse',
-            },
-          }}
-          className='w-full flex flex-row justify-center items-center lg:hidden p-6'
-        >
-          <Image alt='Logo' src='/robobunny.png' height={350} width={350} />
-        </motion.div>
+        <div className='w-full flex flex-row justify-center items-center lg:hidden p-6'>
+          <motion.img
+            alt='Logo'
+            src='/robodroid.png'
+            className='z-0'
+            height={300}
+            width={300}
+            custom={1}
+            animate={controls}
+          />
+          <motion.img
+            alt='Logo'
+            src='/robobunny.png'
+            className='z-50 mx-[-250px]'
+            height={500}
+            width={500}
+            custom={0}
+            animate={controls}
+          />
+          <motion.img
+            alt='Logo'
+            src='/robocat.png'
+            className='z-0'
+            height={300}
+            width={300}
+            custom={2}
+            animate={controls}
+          />
+        </div>
         <div className='flex lg:flex-col w-full lg:w-4/6 justify-center items-center text-center lg:text-left'>
           <div className='max-w-[600px]'>
             <h1 className='my-4 text-6xl font-bold leading-tight text-zinc-100'>
@@ -60,22 +73,32 @@ export const Hero = () => {
             </Link>
           </div>
         </div>
-        <div className='w-full hidden lg:flex lg:flex-row lg:w-2/6 lg:justify-around lg:items-center'>
-          <motion.div custom={0} animate={controls}>
-            <Image
-              alt='Logo'
-              src='/robobunny.png'
-              className='absolute'
-              height={500}
-              width={500}
-            />
-          </motion.div>
-          <motion.div custom={1} animate={controls}>
-            <Image alt='Logo' src='/robodroid.png' height={300} width={300} />
-          </motion.div>
-          <motion.div custom={2} animate={controls}>
-            <Image alt='Logo' src='/robocat.png' height={300} width={300} />
-          </motion.div>
+        <div className='hidden lg:flex lg:flex-row lg:w-2/6 lg:justify-around lg:items-center'>
+          <motion.img
+            alt='Logo'
+            src='/robodroid.png'
+            height={300}
+            width={300}
+            custom={1}
+            animate={controls}
+          />
+          <motion.img
+            alt='Logo'
+            src='/robobunny.png'
+            className='mx-[-200px]'
+            height={500}
+            width={500}
+            custom={0}
+            animate={controls}
+          />
+          <motion.img
+            alt='Logo'
+            src='/robocat.png'
+            height={300}
+            width={300}
+            custom={2}
+            animate={controls}
+          />
         </div>
       </div>
     </div>
