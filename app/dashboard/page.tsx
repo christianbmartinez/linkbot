@@ -1,9 +1,7 @@
 'use client'
 
-const Dashboard = () => (
-  <div className='h-full'>
-    <p>Dashboard</p>
-  </div>
-)
+import Sidebar from '@/components/sidebar'
+
+const Dashboard = () => <Sidebar />
 
 export default Dashboard

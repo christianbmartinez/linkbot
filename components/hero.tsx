@@ -6,7 +6,7 @@ import { motion, useAnimationControls } from 'framer-motion'
 
 import { Button } from './ui/button'
 
-export const Hero = () => {
+const Hero = () => {
   const controls = useAnimationControls()
 
   useEffect(() => {

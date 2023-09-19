@@ -1,10 +1,13 @@
+'use client'
+
 import './globals.css'
+import { usePathname } from 'next/navigation'
 import type { Metadata } from 'next'
-import { Roboto } from 'next/font/google'
+import { Montserrat } from 'next/font/google'
 
 import Footer from '@/components/footer'
 
-const roboto = Roboto({
+const montserrat = Montserrat({
   weight: ['100', '300', '400', '500', '700', '900'],
   style: ['normal', 'italic'],
   subsets: ['latin'],
@@ -16,15 +19,19 @@ export const metadata: Metadata = {
   description: 'All of your socials in one place.',
 }
 
-const RootLayout = ({ children }: { children: React.ReactNode }) => (
-  <html lang='en'>
-    <body
-      className={`${roboto.className} bg-gradient-to-b from-slate-950 to-slate-900`}
-    >
-      {children}
-      <Footer />
-    </body>
-  </html>
-)
+const RootLayout = ({ children }: { children: React.ReactNode }) => {
+  const pathname = usePathname()
+
+  return (
+    <html lang='en'>
+      <body
+        className={`${montserrat.className} bg-gradient-to-b from-slate-950 to-slate-900`}
+      >
+        {children}
+        {pathname === '/dashboard' ? null : <Footer />}
+      </body>
+    </html>
+  )
+}
 
 export default RootLayout

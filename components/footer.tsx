@@ -1,6 +1,6 @@
 import { Button } from './ui/button'
 
-export const Footer = () => (
+const Footer = () => (
   <footer className='flex flex-col items-center text-center bg-slate-950 p-6'>
     <div className='container pb-6'>
       <p className='flex items-center justify-center'>
