@@ -24,7 +24,9 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
 
   return (
     <html lang='en'>
-      <body className={`${montserrat.className} bg-gradient-to-b from-slate-950 to-slate-900`}>
+      <body
+        className={`${montserrat.className} bg-gradient-to-b from-slate-950 to-slate-900`}
+      >
         {children}
         {pathname === '/dashboard' ? null : <Footer />}
       </body>

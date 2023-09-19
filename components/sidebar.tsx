@@ -9,6 +9,7 @@ import {
   LayoutDashboard,
   User2,
   Settings,
+  LogOut,
   AreaChart,
 } from 'lucide-react'
 
@@ -48,6 +49,7 @@ const routes = [
   {
     label: 'Settings',
     icon: Settings,
+    color: 'text-red-700',
     href: '/settings',
   },
 ]
@@ -70,7 +72,7 @@ const Sidebar = () => {
               key={route.href}
               href={route.href}
               className={cn(
-                'group flex w-full cursor-pointer justify-start rounded-lg p-3 text-sm font-medium transition hover:bg-white/10 hover:text-white',
+                'group flex w-full cursor-pointer justify-start rounded-lg p-3 text-sm font-medium transition hover:bg-zinc-100/10 hover:text-white',
                 pathname === route.href
                   ? 'bg-white/10 text-white'
                   : 'text-zinc-400'
@@ -83,6 +85,15 @@ const Sidebar = () => {
             </Link>
           ))}
         </div>
+      </div>
+      <div className='absolute bottom-6 w-1/6 px-3 py-2'>
+        <Link
+          href='/'
+          className='flex w-full cursor-pointer justify-start rounded-lg p-3 text-sm font-medium text-zinc-400 transition hover:bg-zinc-100/10 hover:text-white'
+        >
+          <LogOut className={`mr-3 h-5 w-5 text-cyan-700`} />
+          Logout
+        </Link>
       </div>
     </div>
   )
