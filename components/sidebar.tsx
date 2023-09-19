@@ -3,7 +3,14 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
-import { Bot, FileTerminal, LayoutDashboard, User2, Settings, AreaChart } from 'lucide-react'
+import {
+  Bot,
+  FileTerminal,
+  LayoutDashboard,
+  User2,
+  Settings,
+  AreaChart,
+} from 'lucide-react'
 
 import { cn } from '@/lib/utils'
 
@@ -64,7 +71,9 @@ const Sidebar = () => {
               href={route.href}
               className={cn(
                 'group flex w-full cursor-pointer justify-start rounded-lg p-3 text-sm font-medium transition hover:bg-white/10 hover:text-white',
-                pathname === route.href ? 'bg-white/10 text-white' : 'text-zinc-400'
+                pathname === route.href
+                  ? 'bg-white/10 text-white'
+                  : 'text-zinc-400'
               )}
             >
               <div className='flex flex-1 items-center'>
