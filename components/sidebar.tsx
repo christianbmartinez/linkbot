@@ -3,14 +3,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
-import {
-  Bot,
-  FileTerminal,
-  LayoutDashboard,
-  User2,
-  Settings,
-  AreaChart,
-} from 'lucide-react'
+import { Bot, FileTerminal, LayoutDashboard, User2, Settings, AreaChart } from 'lucide-react'
 
 import { cn } from '@/lib/utils'
 
@@ -56,10 +49,10 @@ const Sidebar = () => {
   const pathname = usePathname()
 
   return (
-    <div className='space-y-4 py-4 flex flex-col h-screen w-1/6 bg-slate-900 text-white'>
-      <div className='px-3 py-2 flex-1'>
+    <div className='flex h-screen w-1/6 flex-col space-y-4 bg-slate-900 py-4 text-white'>
+      <div className='flex-1 px-3 py-2'>
         <Link href='/dashboard' className='flex items-center pb-4'>
-          <div className='relative h-8 w-8 mr-4'>
+          <div className='relative mr-4 h-8 w-8'>
             <Image fill alt='Logo' src='/logo.png' />
           </div>
           <h1 className='text-2xl font-bold text-zinc-100'>Linkbot</h1>
@@ -70,14 +63,12 @@ const Sidebar = () => {
               key={route.href}
               href={route.href}
               className={cn(
-                'text-sm group flex p-3 w-full justify-start font-medium cursor-pointer hover:text-white hover:bg-white/10 rounded-lg transition',
-                pathname === route.href
-                  ? 'text-white bg-white/10'
-                  : 'text-zinc-400'
+                'group flex w-full cursor-pointer justify-start rounded-lg p-3 text-sm font-medium transition hover:bg-white/10 hover:text-white',
+                pathname === route.href ? 'bg-white/10 text-white' : 'text-zinc-400'
               )}
             >
-              <div className='flex items-center flex-1'>
-                <route.icon className={`h-5 w-5 mr-3 ${route.color}`} />
+              <div className='flex flex-1 items-center'>
+                <route.icon className={`mr-3 h-5 w-5 ${route.color}`} />
                 {route.label}
               </div>
             </Link>
