@@ -58,7 +58,7 @@ const Sidebar = () => {
   const pathname = usePathname()
 
   return (
-    <div className='flex h-screen w-1/6 flex-col space-y-4 bg-slate-900 py-4 text-white'>
+    <nav className='h-full space-y-4 bg-slate-900 py-4 text-zinc-100'>
       <div className='flex-1 px-3 py-2'>
         <Link href='/dashboard' className='flex items-center pb-4'>
           <div className='relative mr-4 h-8 w-8'>
@@ -95,7 +95,7 @@ const Sidebar = () => {
           Logout
         </Link>
       </div>
-    </div>
+    </nav>
   )
 }
 

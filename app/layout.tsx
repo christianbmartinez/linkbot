@@ -4,8 +4,6 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Montserrat } from 'next/font/google'
 
-import Footer from '@/components/footer'
-
 const montserrat = Montserrat({
   weight: ['100', '300', '400', '500', '700', '900'],
   style: ['normal', 'italic'],
@@ -24,8 +22,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
       <body
         className={`${montserrat.className} bg-gradient-to-b from-slate-950 to-slate-900`}
       >
-        <main>{children}</main>
-        <Footer />
+        {children}
       </body>
     </html>
   )

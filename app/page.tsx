@@ -1,11 +1,13 @@
-import Header from '@/components/header'
+import Navbar from '@/components/navbar'
 import Hero from '@/components/hero'
+import Footer from '@/components/footer'
 
-const Home = () => (
-  <div className='h-screen'>
-    <Header />
+const LandingPage = () => (
+  <div className='h-full'>
+    <Navbar />
     <Hero />
+    <Footer />
   </div>
 )
 
-export default Home
+export default LandingPage

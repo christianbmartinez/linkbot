@@ -86,8 +86,23 @@ body::-webkit-scrollbar-track {
 /* bg-indigo-500, bg-purple-500, bg-pink-500 in hex */
 body::-webkit-scrollbar-thumb {
   background: rgb(99, 102, 241);
-  background: -moz-linear-gradient(180deg, rgba(99, 102, 241, 1) 0%, rgba(168, 85, 247, 1) 50%, rgba(236, 72, 153, 1) 100%);
-  background: -webkit-linear-gradient(180deg, rgba(99, 102, 241, 1) 0%, rgba(168, 85, 247, 1) 50%, rgba(236, 72, 153, 1) 100%);
-  background: linear-gradient(180deg, rgba(99, 102, 241, 1) 0%, rgba(168, 85, 247, 1) 50%, rgba(236, 72, 153, 1) 100%);
+  background: -moz-linear-gradient(
+    180deg,
+    rgba(99, 102, 241, 1) 0%,
+    rgba(168, 85, 247, 1) 50%,
+    rgba(236, 72, 153, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    180deg,
+    rgba(99, 102, 241, 1) 0%,
+    rgba(168, 85, 247, 1) 50%,
+    rgba(236, 72, 153, 1) 100%
+  );
+  background: linear-gradient(
+    180deg,
+    rgba(99, 102, 241, 1) 0%,
+    rgba(168, 85, 247, 1) 50%,
+    rgba(236, 72, 153, 1) 100%
+  );
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#6366f1",endColorstr="#ec4899",GradientType=1);
 }

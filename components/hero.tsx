@@ -24,7 +24,7 @@ const Hero = () => {
   })
 
   return (
-    <div className='cursor-default px-6 lg:pt-48'>
+    <div className='h-full cursor-default px-6 pb-56 lg:pt-48'>
       <div className='container mx-auto flex flex-col flex-wrap items-center px-3 md:flex-row'>
         <div className='flex w-full flex-row items-center justify-center p-6 lg:hidden'>
           <motion.img
