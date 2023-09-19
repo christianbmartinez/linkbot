@@ -4,13 +4,13 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import {
+  LayoutDashboard,
   Bot,
   FileTerminal,
-  LayoutDashboard,
+  AreaChart,
   User2,
   Settings,
   LogOut,
-  AreaChart,
 } from 'lucide-react'
 
 import { cn } from '@/lib/utils'
@@ -19,38 +19,38 @@ const routes = [
   {
     label: 'Dashboard',
     icon: LayoutDashboard,
-    href: '/dashboard',
     color: 'text-sky-500',
+    href: '/dashboard',
   },
   {
     label: 'My Bot',
     icon: Bot,
-    href: '/my-bot',
     color: 'text-violet-500',
+    href: '/dashboard/my-bot',
   },
   {
     label: 'Prompts',
     icon: FileTerminal,
     color: 'text-pink-700',
-    href: '/prompts',
+    href: '/dashboard/prompts',
   },
   {
     label: 'Analytics',
     icon: AreaChart,
     color: 'text-orange-700',
-    href: '/analytics',
+    href: '/dashboard/analytics',
   },
   {
     label: 'My Account',
     icon: User2,
     color: 'text-green-700',
-    href: '/my-account',
+    href: '/dashboard/my-account',
   },
   {
     label: 'Settings',
     icon: Settings,
     color: 'text-red-700',
-    href: '/settings',
+    href: '/dashboard/settings',
   },
 ]
 
@@ -74,7 +74,7 @@ const Sidebar = () => {
               className={cn(
                 'group flex w-full cursor-pointer justify-start rounded-lg p-3 text-sm font-medium transition hover:bg-zinc-100/10 hover:text-white',
                 pathname === route.href
-                  ? 'bg-white/10 text-white'
+                  ? 'bg-white/10 text-zinc-100'
                   : 'text-zinc-400'
               )}
             >
@@ -89,9 +89,9 @@ const Sidebar = () => {
       <div className='absolute bottom-6 w-1/6 px-3 py-2'>
         <Link
           href='/'
-          className='flex w-full cursor-pointer justify-start rounded-lg p-3 text-sm font-medium text-zinc-400 transition hover:bg-zinc-100/10 hover:text-white'
+          className='flex w-full cursor-pointer justify-start rounded-lg p-3 text-sm font-medium text-zinc-400 transition hover:bg-zinc-100/10 hover:text-zinc-100'
         >
-          <LogOut className={`mr-3 h-5 w-5 text-cyan-700`} />
+          <LogOut className='mr-3 h-5 w-5 text-cyan-700' />
           Logout
         </Link>
       </div>
