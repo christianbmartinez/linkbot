@@ -1,8 +1,6 @@
-import Link from 'next/link'
 import { motion } from 'framer-motion'
 
 import MenuItem from './menu-item'
-import { Button } from './ui/button'
 
 const variants = {
   open: {
@@ -24,11 +22,11 @@ const links = [
 ]
 
 const Navigation = () => (
-  <motion.div className='menu-ul' variants={variants}>
+  <motion.ul className='menu-ul' variants={variants}>
     {links.map((link) => (
       <MenuItem href={link} key={link} />
     ))}
-  </motion.div>
+  </motion.ul>
 )
 
 export default Navigation

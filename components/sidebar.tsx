@@ -62,7 +62,7 @@ const Sidebar = () => {
       <div className='flex-1 px-[15px] py-[18px]'>
         <Link href='/dashboard' className='flex items-center pb-4'>
           <div className='relative mr-3 h-8 w-8'>
-            <Image fill alt='Logo' src='/logo.png' />
+            <Image width={30} height={30} alt='Logo' src='/logo.png' />
           </div>
           <h1 className='text-2xl font-bold text-zinc-100'>Linkbot</h1>
         </Link>

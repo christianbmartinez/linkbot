@@ -151,5 +151,16 @@ body::-webkit-scrollbar-thumb {
   top: 0;
   right: 0;
   bottom: 0;
-  width: 300px;
+  z-index: 99;
+  width: 100vw;
+}
+
+.menu-background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  z-index: 0;
+  background: rgb(244 244 245);
 }
