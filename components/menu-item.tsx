@@ -20,19 +20,19 @@ const variants = {
 
 const MenuItem = ({ href }: any) => {
   return (
-    <motion.div
+    <motion.li
       className='menu-li'
       variants={variants}
       whileHover={{ scale: 0.95 }}
       whileTap={{ scale: 0.95 }}
     >
       <Link
-        className={`text-lg font-light text-zinc-100 hover:text-zinc-300`}
+        className={`text-lg font-normal text-zinc-900 hover:text-zinc-950`}
         href={`/${href === 'home' ? '' : href}`}
       >
         {href.toUpperCase()}
       </Link>
-    </motion.div>
+    </motion.li>
   )
 }
 
