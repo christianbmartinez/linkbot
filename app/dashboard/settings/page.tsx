@@ -1,7 +1,7 @@
-import CardSettings from '@/components/card-settings'
-import CardProfile from '@/components/card-profile'
+import CardSettings from '@/components/cards/card-settings'
+import CardProfile from '@/components/cards/card-profile'
 
-const Settings = () => {
+const SettingsPage = () => {
   return (
     <>
       <div className='flex flex-row items-center justify-center'>
@@ -16,4 +16,4 @@ const Settings = () => {
   )
 }
 
-export default Settings
+export default SettingsPage

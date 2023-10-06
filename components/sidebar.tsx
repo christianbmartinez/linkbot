@@ -58,10 +58,10 @@ const Sidebar = () => {
   const pathname = usePathname()
 
   return (
-    <nav className='h-full space-y-4 bg-slate-900 py-4 text-zinc-100'>
-      <div className='flex-1 px-3 py-2'>
+    <nav className='h-full space-y-4 bg-slate-900 text-zinc-100'>
+      <div className='flex-1 px-[15px] py-[18px]'>
         <Link href='/dashboard' className='flex items-center pb-4'>
-          <div className='relative mr-4 h-8 w-8'>
+          <div className='relative mr-3 h-8 w-8'>
             <Image fill alt='Logo' src='/logo.png' />
           </div>
           <h1 className='text-2xl font-bold text-zinc-100'>Linkbot</h1>

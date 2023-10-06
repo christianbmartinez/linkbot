@@ -6,7 +6,7 @@ import { Button } from './ui/button'
 const Navbar = () => (
   <nav className='flex items-center justify-between p-6'>
     <Link href='/' className='flex items-center'>
-      <div className='relative mr-4 h-8 w-8'>
+      <div className='relative mr-3 h-8 w-8'>
         <Image fill alt='Logo' src='/logo.png' />
       </div>
       <h1 className='text-2xl font-bold text-zinc-100'>Linkbot</h1>

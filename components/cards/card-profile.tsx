@@ -1,12 +1,19 @@
 import Link from 'next/link'
 import { Pin, Briefcase, School } from 'lucide-react'
 
-import { Button } from './ui/button'
+import { Button } from '../ui/button'
+import { Avatar, AvatarFallback, AvatarImage } from '../ui/avatar'
 
 const CardProfile = () => {
   return (
-    <div className='relative mb-6 mt-16 flex w-full min-w-0 flex-col break-words rounded-xl bg-slate-800 shadow-xl'>
+    <div className='relative mb-6 mt-16 flex w-full flex-col break-words rounded-xl bg-slate-800 shadow-xl'>
       <div className='px-6'>
+        <div className='flex flex-row items-center justify-center pt-8'>
+          <Avatar>
+            <AvatarImage src='https://github.com/shadcn.png' />
+            <AvatarFallback>LB</AvatarFallback>
+          </Avatar>
+        </div>
         <div className='flex flex-wrap justify-center'>
           <div className='w-full px-4 text-center'>
             <div className='flex justify-center py-4 pt-8 lg:pt-4'>
@@ -67,7 +74,7 @@ const CardProfile = () => {
                 &nbsp;to stay up to date on my tech journey!
               </p>
               <Link href='/'>
-                <Button>Show More</Button>
+                <Button variant='default'>Show More</Button>
               </Link>
             </div>
           </div>

@@ -1,12 +1,18 @@
+'use client'
+
 import Sidebar from '@/components/sidebar'
+import Menu from '@/components/menu'
 
 const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className='flex'>
-      <div className='h-screen w-1/6'>
+      <div className='hidden h-screen lg:block lg:w-1/6'>
         <Sidebar />
       </div>
-      <div className='h-screen w-5/6'>{children}</div>
+      <div className='block h-screen w-full lg:hidden'>
+        <Menu />
+      </div>
+      <div className='hidden h-screen w-5/6'>{children}</div>
     </div>
   )
 }
