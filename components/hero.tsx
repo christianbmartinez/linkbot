@@ -6,7 +6,7 @@ import { motion, useAnimationControls } from 'framer-motion'
 
 import { Button } from './ui/button'
 
-const Hero = () => {
+export const Hero = () => {
   const controls = useAnimationControls()
 
   useEffect(() => {
@@ -24,7 +24,7 @@ const Hero = () => {
   })
 
   return (
-    <div className='h-full cursor-default px-6 pb-56 lg:pt-48'>
+    <div className='h-full cursor-default overflow-hidden px-6 pb-56 pt-12 lg:pt-48'>
       <div className='container mx-auto flex flex-col flex-wrap items-center px-3 md:flex-row'>
         <div className='flex w-full flex-row items-center justify-center p-6 lg:hidden'>
           <motion.img
@@ -55,7 +55,7 @@ const Hero = () => {
             animate={controls}
           />
         </div>
-        <div className='flex w-full items-center justify-center text-center lg:w-4/6 lg:flex-col lg:text-left'>
+        <div className='lg:justify-left flex w-full items-center justify-center text-center lg:w-3/6 lg:text-left'>
           <div className='max-w-[600px]'>
             <h1 className='my-4 text-6xl font-bold leading-tight text-zinc-100'>
               Create your <br /> own&nbsp;
@@ -67,12 +67,12 @@ const Hero = () => {
               Let your audience get to know more about who you are and what you
               do through artificial intelligence.
             </p>
-            <Link href='/dashboard'>
+            <Link href='/signup'>
               <Button variant='gradient'>Try It Now Free</Button>
             </Link>
           </div>
         </div>
-        <div className='hidden lg:flex lg:w-2/6 lg:flex-row lg:items-center lg:justify-around'>
+        <div className='hidden lg:flex lg:w-3/6 lg:items-center lg:justify-around'>
           <motion.img
             alt='Logo'
             src='/robodroid.png'
@@ -103,5 +103,3 @@ const Hero = () => {
     </div>
   )
 }
-
-export default Hero
