@@ -57,7 +57,7 @@ export const Hero = () => {
         </div>
         <div className='lg:justify-left flex w-full items-center justify-center text-center lg:w-3/6 lg:text-left'>
           <div className='max-w-[600px]'>
-            <h1 className='my-4 text-6xl font-bold leading-tight text-zinc-100'>
+            <h1 className='my-4 text-5xl font-bold leading-tight text-zinc-100'>
               Create your <br /> own&nbsp;
               <span className='bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text font-extrabold text-transparent'>
                 chatbot
