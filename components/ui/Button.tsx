@@ -10,17 +10,17 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          'bg-primary text-primary-foreground hover:bg-primary/90 border-0 hover:scale-[0.97] transition duration-300 ease-in-out rounded-lg shadow-lg',
+          'bg-primary text-primary-foreground hover:bg-primary/90 border-0 hover:scale-[0.97] transition duration-300 ease-in-out rounded-full shadow-xl',
         destructive:
-          'bg-destructive text-destructive-foreground hover:bg-destructive/90',
+          'bg-destructive text-destructive-foreground hover:bg-destructive/90 rounded-full',
         outline:
-          'border border-input bg-background hover:bg-accent hover:text-accent-foreground',
+          'border border-input bg-background hover:bg-accent hover:text-accent-foreground rounded-full hover:scale-[0.97] transition duration-300 ease-in-out',
         secondary:
-          'bg-secondary text-secondary-foreground hover:bg-secondary/80',
+          'bg-secondary text-secondary-foreground hover:bg-secondary/80 rounded-full',
         ghost: 'hover:bg-accent hover:text-accent-foreground',
         link: 'text-primary underline-offset-4 hover:underline',
         gradient:
-          'bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-zinc-100 border-0 hover:scale-[0.97] transition duration-300 ease-in-out rounded-full shadow-lg',
+          'bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-zinc-100 border-0 hover:scale-[0.97] transition duration-300 ease-in-out rounded-full shadow-xl',
       },
       size: {
         default: 'h-10 px-4 py-2',
